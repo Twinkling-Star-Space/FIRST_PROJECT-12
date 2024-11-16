@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <style>
+        *{
+            margin:0px;
+        }
+        .whole{
+            height:100%;
+            width: 100%;
+            position:fixed;
+            background-color: grey;
+        }
+      .photo{
+        position:relative;
+        left:40%;
+        margin-top:5rem;
+        border-radius:60%;
+      }
+      .input{
+        position:relative;
+        left:25%;
+        width:25rem;
+        height:2rem;
+        border-radius:8px;
+        margin-bottom: 25px;;
+      }
+      p{
+        position:relative;
+        left:25%;
+      }
+
+      .form{
+        left:21%;
+        height:90%;
+        width:60%;
+        position:relative;
+        border-color: black;
+        border-width:2px;
+        background-color:white;
+        margin-top:2rem;
+        padding-top:1%;
+       
+      }
+
+      .closebtn{
+        text-decoration: none;
+        position:absolute;
+        left:95%;
+        top:5%;
+        
+        
+      }
+      .submit{
+        position:relative;
+        left:10%;
+        width:8rem;
+        height:3rem;
+        margin-top:4rem;
+        margin-bottom:2rem;
+        border-radius:4rem;
+        background-color: rgb(13, 175, 13);
+        border:none;
+        color:white;
+        font-size:20px;
+        
+        
+      }
+      .submit:hover{
+        background-color: rgb(78, 180, 78);
+      }
+    </style>
+</head>
+<body>
+    <div class="whole">
+    <form action="">
+    <div class="form">
+        <p class="closebtn" onclick="closewin()">×</p>
+    <img  class="photo" src="photo.png" alt=""><br>
+   <p>First-Name:</p><input class="input" type="text" ><br>
+   <p>Middle-Name:</p><input class="input" type="text"><br>
+   <p>Last-Name:</p><input class="input" type="text"><br>
+    <p>Email:</p><input class="input" type="text"><br>
+    <button class="submit">Save</button><br>
+</div>
+</form>
+</div>
+<script>
+    let myWindow;
+    function openwin(){
+        myWindow = window.open("http://127.0.0.1:5500/profile.html","_blank");
+    }
+  function closewin()
+        {
+        myWindow.close();
+        }
+</script>
+</body>
+</html>

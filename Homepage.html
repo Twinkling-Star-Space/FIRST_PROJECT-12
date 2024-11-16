@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first page</title>
+    <style>
+        * {
+            margin: 0;
+        }
+       a{
+        text-decoration:none;
+       }
+        .heading {
+            width: 120pc;
+            background-color: #111;
+            height: 6pc;
+            display: flex;
+            position:fixed;
+        }
+
+        p {
+            margin-left: 1.6pc;
+            margin-right: 2pc;
+            margin-top: 2.5pc;
+            position: relative;
+            color: white;
+            cursor:pointer;
+            
+        }
+
+        .srch {
+            margin-left: 2rem;
+        }
+
+        .si {
+            width: 32pc;
+            height: 2pc;
+            margin-top: 2pc;
+            border-radius: 0px 7px 7px 0px;
+            border-left-color: white;
+            padding-left: 2rem;
+            color: rgb(81, 77, 77);
+
+        }
+         ::placeholder {
+            color:black;
+            opacity:1;
+        }
+
+        .srch {
+            border-width: 2px;
+            width: 2.3pc;
+            height: 2.3rem;
+            margin-top: 2pc;
+            background-color: grey;
+            border-radius: 7px 0px 0px 7px;
+        }
+
+        .hrline {
+            background-color: #1d1b1b;
+            padding: 15px;
+            cursor:pointer;
+
+        }
+
+        .hrline:hover {
+            background-color: #ddd;
+   }
+
+       .sidenav .closebtn{
+        position:absolute;
+        top:0;
+        right:25px;
+        font-size:36px;
+       }
+
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            background-color: #2e2c2c;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .sidenav a {
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .fir{
+            margin-left:1pc;
+            margin-top:2.4pc;
+        }
+        .td{
+            position:relative;
+            width:50px;
+            height:3rem;
+            margin-top:1.5pc;
+            color:white;
+            margin-left:1pc;
+            background-color: #656262;
+            border-radius:50%;
+            opacity:16px;
+            cursor:pointer;
+        }
+
+        .td:hover{
+           background-color:#ddd;
+        }
+
+        .photo{
+            position:relative;
+            height:4pc;
+            width:4pc;
+            color:white;
+            border:3px;
+            clip-path:circle(45%);
+            margin-top:1.2pc;
+            margin-left:1pc;
+        }
+
+        .backimage{
+            background-image: url('bimage.avif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div class="heading" id="main">
+            <img class="hrline" src="hr.png" alt="search" onclick="openNav()">
+           <a href="HOME.html"><p>RESOURCES</p></a> 
+            <p>ADD-MORE</p>
+            <img class="srch" src="search.png.png" alt="loading..">
+            <input class="si" type="text" placeholder="Search your Solution">
+           <a href="signin.html"><p> SIGN IN</p></a>
+            <p> CONTACT</p>
+            <P>ABOUT</P> 
+           <a href="profile.html"><img class="photo" src="photo.png" alt=""></a> 
+            <img  class=" td" src="three-dots.png" alt="for more option">
+
+       
+
+            <div class="sidenav" id="mysidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <p class="fir">RECENTS</p>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+
+            </div>
+
+        </div>
+        <div class="backimage">
+            
+        </div>
+    </div>
+    <script>
+        function openNav()
+        {
+            document.getElementById("mysidebar").style.width ="250px";
+        }
+        function closeNav()
+        {
+        document.getElementById("mysidebar").style.width ="0";
+        }
+    </script>
+</body>
+
+</html>
